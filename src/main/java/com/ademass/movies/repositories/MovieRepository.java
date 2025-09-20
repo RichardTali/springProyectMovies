@@ -1,13 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
+
 package com.ademass.movies.repositories;
 
-/**
- *
- * @author Usuario
- */
-public interface MovieRepository {
+import com.ademass.movies.models.Movie;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+
+public interface MovieRepository extends JpaRepository<Movie, Long>{ 
+//El JpaRepository atravez del operador Dayamond nos va exigir que se entregue dos tipos datos, en primer lugar la entidad con
+// la que va estar trabajando el repositorio en este caso Movie el segundo tipo de dato que nos va a pedir es el tipo 
+// de dato del identificador es decir de su clave primaria    
+    
+    
     
 }
